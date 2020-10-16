@@ -1,0 +1,13 @@
+<apex:page controller="GitHubListWithController">
+    <apex:form >
+        <apex:pageBlock title="Most Starred GitHub Repositories List" id="repositories_list">
+            <!-- Repositories List goes here -->
+            <!-- Repositories List -->
+<apex:pageBlockTable value="{! gitHubRepositories }" var="gt">
+    <apex:column value="{! gt.Name }"/>
+    <apex:column value="{! gt.Stargazer_quantity__c }"/>
+    <apex:column value="{! gt.Fork_quantity__c }"/>
+</apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
